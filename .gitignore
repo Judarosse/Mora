@@ -1,6 +1,13 @@
+# Python
 __pycache__/
+
+# Logs y backups
 *.log
 *.bak
 backup/
+
+# Node
 node_modules/
+
+# Variables de entorno
 .env
