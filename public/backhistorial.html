@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard · Historial</title>
+
+  <!-- MISMO CSS DEL DASHBOARD -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Ajustes mínimos solo para historial -->
+  <style>
+    .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+      align-items: flex-end;
+    }
+
+    select, input, button {
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background: #6FADCF;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0F2C3A;
+    }
+
+    .grafica {
+      background: #0d0d0d;
+      padding: 16px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MISMO BOTÓN -->
+  <div class="menu-toggle" id="toggleSidebar">☰</div>
+
+  <div class="container">
+
+    <!-- MISMA SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Nodos</h2>
+      <ul id="menuNodos"></ul>
+
+      <div class="sidebar-footer">
+        <button class="historial-btn"
+                onclick="window.location.href='/'">
+          Dashboard
+        </button>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO (SOLO ESTO CAMBIA) -->
+    <main class="content">
+
+      <br><br>
+      <h1>Historial de Sensores</h1>
+
+      <!-- FILTROS -->
+      <div class="filtros">
+
+        <div>
+          <label>Nodo</label><br>
+          <select id="nodo"></select>
+        </div>
+
+        <div>
+          <label>Fecha</label><br>
+          <input type="date" id="fecha">
+        </div>
+
+        <div>
+          <label>Desde (HH:MM)</label><br>
+          <input type="text" id="desde" placeholder="00:00">
+        </div>
+
+        <div>
+          <label>Hasta (HH:MM)</label><br>
+          <input type="text" id="hasta" placeholder="23:59">
+        </div>
+
+        <div>
+          <button id="cargar">Cargar</button>
+        </div>
+
+      </div>
+
+      <!-- GRÁFICA -->
+      <div class="grafica">
+        <canvas id="grafica" height="120"></canvas>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- MISMO TOGGLE -->
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- JS HISTORIAL -->
+  <script src="historial.js"></script>
+
+</body>
+</html>

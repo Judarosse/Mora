@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard · Historial</title>
+
+  <!-- MISMO CSS DEL DASHBOARD -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Ajustes SOLO para historial -->
+  <style>
+    .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+      align-items: flex-end;
+    }
+
+    .filtros select {
+      min-width: 70px;
+      text-align: center;
+    }
+
+    .grafica {
+      background: #0d0d0d;
+      padding: 16px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTÓN SIDEBAR -->
+  <div class="menu-toggle" id="toggleSidebar">☰</div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Nodos</h2>
+      <ul id="menuNodos"></ul>
+
+      <div class="sidebar-footer">
+        <button class="historial-btn" onclick="window.location.href='/'">
+          Dashboard
+        </button>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+      <h1>Historial de Sensores</h1>
+
+      <!-- FILTROS -->
+      <div class="filtros">
+
+        <div>
+          <label>Nodo</label><br>
+          <select id="nodo"></select>
+        </div>
+
+        <div>
+          <label>Fecha</label><br>
+          <input type="date" id="fecha">
+        </div>
+
+        <div>
+          <label>Desde</label><br>
+          <select id="desdeHora"></select> :
+          <select id="desdeMin"></select>
+        </div>
+
+        <div>
+          <label>Hasta</label><br>
+          <select id="hastaHora"></select> :
+          <select id="hastaMin"></select>
+        </div>
+
+        <div>
+          <button id="cargar">Cargar</button>
+        </div>
+
+      </div>
+
+      <!-- GRÁFICA -->
+      <div class="grafica">
+        <canvas id="grafica" height="120"></canvas>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- TOGGLE SIDEBAR -->
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- JS HISTORIAL -->
+  <script src="historial.js"></script>
+
+</body>
+</html>

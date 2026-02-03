@@ -1,0 +1,6 @@
+__pycache__/
+*.log
+*.bak
+backup/
+node_modules/
+.env

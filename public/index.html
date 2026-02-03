@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Sensores</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+</head>
+
+<body>
+
+  <div class="menu-toggle" id="toggleSidebar">☰</div>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <h2>Nodos</h2>
+      <ul id="menuNodos"></ul>
+
+      <div class="sidebar-footer">
+        <button id="historialBtn" class="historial-btn">
+          Historial
+        </button>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <br><br>
+      <h1 id="tituloNodo">Selecciona un nodo</h1>
+
+      <div id="dashboard" class="dashboard hidden">
+
+        <div class="gauge-card">
+          <h2>Temperatura</h2>
+          <canvas id="gaugeTemp"></canvas>
+          <p id="tempValue" class="value-text">-- °C</p>
+        </div>
+
+        <div class="gauge-card">
+          <h2>pH</h2>
+          <canvas id="gaugePH"></canvas>
+          <p id="phValue" class="value-text">--</p>
+        </div>
+
+        <div class="gauge-card">
+          <h2>Conductividad</h2>
+          <canvas id="gaugeEC"></canvas>
+          <p id="ecValue" class="value-text">-- µS/cm</p>
+        </div>
+
+        <div class="gauge-card">
+          <h2>Oxígeno Disuelto</h2>
+          <canvas id="gaugeDO"></canvas>
+          <p id="doValue" class="value-text">-- mg/L</p>
+        </div>
+
+        <div id="batteryCard" class="gauge-card">
+          <h2>Batería</h2>
+          <div class="battery-bar-outer">
+            <div id="batteryBar" class="battery-bar-inner" style="width:0%"></div>
+          </div>
+          <p id="batText" class="value-text">-- V ( -- % )</p>
+        </div>
+
+        <div id="ubicacion" class="gauge-card hidden">
+          <h2>Ubicación</h2>
+          <p>📍 Latitud: <span id="latitud">--</span></p>
+          <p>📍 Longitud: <span id="longitud">--</span></p>
+          <p>📡 Satélites: <span id="satelites">--</span></p>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <h3>Hora Actual</h3>
+        <p id="horaActual">--</p>
+      </div>
+
+      <div class="card">
+        <h3>Última actualización</h3>
+        <p id="ultimaActualizacion">--</p>
+      </div>
+
+      <button onclick="descargar()"
+              style="margin-left:12px; font-weight:600; font-family:Arial, sans-serif;">
+        Descargar Datos
+      </button>
+
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const historialBtn = document.getElementById('historialBtn');
+      const toggle = document.getElementById('toggleSidebar');
+      const sidebar = document.querySelector('.sidebar');
+
+      if (historialBtn) {
+        historialBtn.addEventListener('click', () => {
+          window.location.href = '/historial';
+        });
+      }
+
+      toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
