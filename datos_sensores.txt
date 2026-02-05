@@ -1466,3 +1466,6 @@ Fecha; Hora; Nodo; Bat; Temp; pH; EC; DO; Lat; Lon; Sat
 5/2/2026; 09:59; NODE1; Bat=4.05; Tmp=25; pH=6.17; EC=0; DO=3.02; Lat=0; Lon=0; Sat=0
 5/2/2026; 10:00; NODE1; Bat=4.05; Tmp=25; pH=6.52; EC=0; DO=3.41; Lat=0; Lon=0; Sat=0
 5/2/2026; 10:01; NODE1; Bat=4.03; Tmp=25; pH=6.8; EC=0; DO=3.52; Lat=0; Lon=0; Sat=0
+5/2/2026; 10:02; NODE1; Bat=4.03; Tmp=25; pH=6.93; EC=0; DO=3.44; Lat=0; Lon=0; Sat=0
+5/2/2026; 10:03; NODE1; Bat=4.03; Tmp=25; pH=6.93; EC=0; DO=3.47; Lat=0; Lon=0; Sat=0
+5/2/2026; 10:04; NODE1; Bat=4.03; Tmp=25; pH=7.93; EC=0; DO=3.45; Lat=0; Lon=0; Sat=0
