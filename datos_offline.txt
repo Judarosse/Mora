@@ -1,0 +1,4 @@
+2026-02-11 10:51:03; Nodo: NODE3; Lat: 0.000000; Lon: 0.000000; Sat: 0; Bat: ; Temp: 20.09; pH: 9.74; EC: ; DO: 2.31
+2026-02-11 10:51:18; Nodo: NODE2; Lat: 0.000000; Lon: 0.000000; Sat: 0; Bat: 4.05; Temp: 21.; pH: 6.32; EC: 0.00; DO: 2.52
+2026-02-11 10:51:31; Nodo: NODE3; Lat: 0.000000; Lon: ; Sat: ; Bat: ; Temp: 20.0; pH: 9.74; EC: ; DO: 2.31
+2026-02-11 10:52:04; Nodo: NODE3; Lat: 0.000000; Lon: ; Sat: ; Bat: ; Temp: ; pH: 9.74; EC: ; DO: 2.31
