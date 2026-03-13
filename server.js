@@ -169,11 +169,19 @@ let ultimosDatosParaGuardar = {};
 
 // === UTILIDADES ===
 function limpiarNodo(n) {
+
   if (!n) return null;
-  let limpio = n.toUpperCase().replace(/[^A-Z0-9]/g, "");
-  const match = limpio.match(/(\d+)/);
+
+  const match = n.toUpperCase().match(/NODE\s*(\d+)/);
+
   if (!match) return null;
-  return "NODE" + match[1];
+
+  const numero = parseInt(match[1]);
+
+  // evita nodos absurdos como NODE705755
+  if (numero > 50) return null;
+
+  return "NODE" + numero;
 }
 
 function porcentajeBateria(v) {
