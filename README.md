@@ -1,4 +1,3 @@
-<img width="527" height="296" alt="imagen" src="https://github.com/user-attachments/assets/e16977ea-107c-47e5-809f-4576e49e582a" />Informe Ejecutivo
 Monitoreo sustentable de variables críticas en cultivos piscícolas de la Región del Magdalena Medio
 ________________________________________
 1. Introducción
@@ -98,7 +97,7 @@ ________________________________________
 
 <img width="3024" height="4032" alt="primera estructura del cajón receptor" src="https://github.com/user-attachments/assets/35129ce3-5813-4fd5-835b-812ee2348f48" />
 <img width="1200" height="1600" alt="nodo" src="https://github.com/user-attachments/assets/c8ed8678-9350-44fc-ad33-3efab39ed5af" />
-
+<img width="527" height="296" alt="imagen" src="https://github.com/user-attachments/assets/e16977ea-107c-47e5-809f-4576e49e582a" />
 
 
 
